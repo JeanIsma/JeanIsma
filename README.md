@@ -110,6 +110,16 @@ Most of my professional AI work and one of my own products are private, so the p
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=JeanIsma&bg_color=00000000&color=477a58&line=2f6d45&point=74a985&area=true&area_color=2f6d45&hide_border=true&custom_title=Contribution%20Activity" width="100%" alt="Jean Yildirim GitHub contribution activity" />
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JeanIsma/JeanIsma/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JeanIsma/JeanIsma/output/github-contribution-grid-snake.svg" />
+    <img alt="Animated contribution snake" src="https://raw.githubusercontent.com/JeanIsma/JeanIsma/output/github-contribution-grid-snake.svg" width="100%" />
+  </picture>
+</p>
+
+<p align="center"><sub>The animation above is generated from my real GitHub contribution grid and refreshes automatically.</sub></p>
+
 ---
 
 ## 🎓 Education
