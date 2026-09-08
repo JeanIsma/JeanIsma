@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Jean Yildirim — AI Solutions Architect</title>
+  <desc id="desc">A calm green landscape with a translucent glass profile card and subtle animation.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff4ea"/>
+      <stop offset="0.56" stop-color="#bcdcc8"/>
+      <stop offset="1" stop-color="#8fba96"/>
+    </linearGradient>
+    <linearGradient id="farHill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6e9b73"/>
+      <stop offset="1" stop-color="#456d52"/>
+    </linearGradient>
+    <linearGradient id="nearHill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4d7e55"/>
+      <stop offset="1" stop-color="#264c35"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#edf8f1" stop-opacity="0.24"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#163923" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#sky)"/>
+  <g opacity="0.56">
+    <ellipse cx="100" cy="78" rx="55" ry="18" fill="#fff" filter="url(#blur)">
+      <animateTransform attributeName="transform" type="translate" values="-40 0;95 0;-40 0" dur="24s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="980" cy="92" rx="74" ry="22" fill="#fff" filter="url(#blur)">
+      <animateTransform attributeName="transform" type="translate" values="65 0;-105 0;65 0" dur="31s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <path d="M0 210 C150 155 255 177 392 203 C525 228 624 153 760 171 C906 190 1012 128 1200 164 L1200 360 L0 360 Z" fill="url(#farHill)" opacity="0.70"/>
+  <path d="M0 275 C158 218 280 247 426 274 C566 300 673 217 818 239 C946 258 1089 225 1200 244 L1200 360 L0 360 Z" fill="url(#nearHill)"/>
+  <g opacity="0.55">
+    <path d="M58 331 q7 -38 14 0" stroke="#7fb882" stroke-width="3" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="-2 65 331;3 65 331;-2 65 331" dur="4.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M104 340 q5 -48 10 0" stroke="#90c58f" stroke-width="3" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="2 109 340;-3 109 340;2 109 340" dur="5.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1118 336 q6 -42 12 0" stroke="#7fb882" stroke-width="3" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="-3 1124 336;2 1124 336;-3 1124 336" dur="5.1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="92" y="63" width="1016" height="226" rx="34" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.58"/>
+    <rect x="113" y="84" width="6" height="184" rx="3" fill="#2f6d45" fill-opacity="0.76"/>
+    <rect x="174" y="99" width="850" height="34" rx="17" fill="url(#shine)" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="-360 0;340 0;-360 0" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="160" y="137" fill="#163923" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">JEAN YILDIRIM</text>
+  <text x="160" y="190" fill="#102d1d" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="750">AI Solutions Architect</text>
+  <text x="160" y="228" fill="#294d37" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="500">Software Developer · Building products toward a future company</text>
+  <text x="160" y="260" fill="#365c43" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Practical AI systems. Clear software. Complex infrastructure made simpler.</text>
+  <g transform="translate(1014 121)">
+    <circle cx="0" cy="0" r="7" fill="#3c8555" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.82;0.35" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="6;8;6" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#3c8555" stroke-opacity="0.18">
+      <animate attributeName="r" values="12;22;12" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.28;0;0.28" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
