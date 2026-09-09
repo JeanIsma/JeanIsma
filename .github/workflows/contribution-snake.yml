@@ -20,8 +20,36 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%232f6d45
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2374a985
+            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%23316d4f
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23d6ff91
+
+      - name: Add the profile frame and reduced-motion support
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          for filename, dark in [("github-contribution-grid-snake.svg", False), ("github-contribution-grid-snake-dark.svg", True)]:
+              path = Path("dist") / filename
+              source = path.read_text()
+              match = re.search(r'<svg\b([^>]*)>', source)
+              if not match:
+                  raise ValueError("Missing SVG root")
+              width = float(re.search(r'width="([\d.]+)', match.group(1)).group(1))
+              height = float(re.search(r'height="([\d.]+)', match.group(1)).group(1))
+              viewbox = re.search(r'viewBox="([^"]+)"', match.group(1)).group(1)
+              body = source[match.end():source.rfind('</svg>')]
+              w, h = width + 64, height + 118
+              bg, fg, muted, stroke = ("#0d181a", "#ecf7ef", "#91aca3", "#3b5650") if dark else ("#f3f8f3", "#172e24", "#5c786c", "#b8cfc0")
+              accent = "#d6ff91" if dark else "#316d4f"
+              path.write_text(f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w:g}" height="{h:g}" viewBox="0 0 {w:g} {h:g}" role="img" aria-labelledby="snake-title">
+              <title id="snake-title">Jean Yildirim's actual GitHub contributions, animated as a snake</title>
+              <rect x="1" y="1" width="{w-2:g}" height="{h-2:g}" rx="20" fill="{bg}" stroke="{stroke}"/>
+              <circle cx="33" cy="35" r="4" fill="{accent}"/>
+              <text x="48" y="40" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="1.7" fill="{fg}">BUILDING, ONE COMMIT AT A TIME.</text>
+              <text x="32" y="{h-21:g}" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="{muted}">Real GitHub contributions · Refreshed twice daily</text>
+              <svg x="32" y="64" width="{width:g}" height="{height:g}" viewBox="{viewbox}">{body}</svg>
+              <style>@media(prefers-reduced-motion:reduce){{*{{animation:none!important}}}}</style>
+              </svg>''')
 
       - name: Publish generated SVGs
         uses: peaceiris/actions-gh-pages@v4
