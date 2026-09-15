@@ -134,6 +134,52 @@ Computer Science studies · 2023 — 2024
   <a href="https://github.com/JeanIsma?tab=repositories">Public repositories</a>
 </p>
 
+<br/>
+
+## Want to steal the setup? Please do. 🛠️
+
+I **hate gatekeeping**. If you like the snake, the responsive hero, the image buttons, the project panels or the light/dark-mode tricks, you should not have to reverse-engineer my README like it is an archaeological site.
+
+I wrote a step-by-step guide with copy-ready snippets:
+
+### [**→ Build a profile like this: PROFILE-GUIDE.md**](PROFILE-GUIDE.md)
+
+It covers:
+
+- 🐍 the **contribution snake** and the exact GitHub Actions workflow
+- 🌗 automatic **light/dark mode** images
+- 📱 responsive desktop/mobile hero artwork
+- ♿ reduced-motion support
+- 🔘 clickable SVG buttons
+- 🖼️ full-width project panels
+- 🧰 stack and experience layouts
+- 🗂️ a simple repository structure you can copy
+- 🔧 troubleshooting when GitHub decides your perfectly reasonable SVG needs character development
+
+The rule is simple: **copy the implementation, not my identity.** Use the engineering, change the content, make it yours, and if someone asks you how you did it later, pass the knowledge on.
+
+<details>
+  <summary><strong>🐍 Just here for the snake? Here is the shortcut.</strong></summary>
+
+  <br/>
+
+  Copy [`/.github/workflows/contribution-snake.yml`](.github/workflows/contribution-snake.yml) into your own profile repository, enable **Settings → Actions → General → Workflow permissions → Read and write permissions**, run the workflow once, then use:
+
+```html
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake" />
+  </picture>
+</p>
+```
+
+Replace `YOUR_USERNAME` and you are basically done. No secret handshake required.
+
+</details>
+
+<br/>
+
 <details>
   <summary>About the visuals</summary>
   <p>The landscape and glass sculpture are original AI-generated artwork. The SimpleTrain mark is my existing project logo, and the product preview is an actual screenshot of the public prototype. The GHS and ReleaseGuard panels are conceptual illustrations. The snake uses GitHub contribution data. SVG animation is self-contained and supports reduced-motion preferences; the career and project information remains readable as standard Markdown.</p>
